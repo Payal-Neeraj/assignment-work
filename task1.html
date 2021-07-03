@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Task 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body style="margin-left: 30px;margin-bottom: 30px;">
+        <div style="margin-bottom: -5rem;">
+            <div style="float:left;padding-right: 100px;">
+                <h2 style="margin-top: 1px;">Input Canvas</h2>
+                <canvas id= "inputCanvas"></canvas>
+                
+            </div>
+          <div style="margin-top: 50px;">
+            <h2> Output Canvas </h2>
+            <canvas id= "outputCanvas"></canvas>
+            
+          </div>
+        </div>
+       <div>
+           <!--Upload Button Field-->
+        <canvas id= "outputCanvas"></canvas><br><br>
+        
+        <div class="input-group mb-3">
+            <div class="custom-file" style="width:20px;">
+              <input type="file" class="custom-file-input" id="imageInput" accept = "image/*">
+              <label style="width:250px;" class="custom-file-label" for="inputGroupFile01">Choose file</label>
+            </div>
+            </div>
+            <!--Input field for height and width-->
+       <div>
+           <div>
+            <label for="height">Height:</label> 
+            <input class="height form-control" type="text" id="height" placeholder="Height" style="width:150px;"> 
+           </div>
+           <div>
+            <label for="width">Width:</label> 
+            <input class="width form-control" type="text" id="width" placeholder="Width" style="width:150px;"> 
+           </div>
+
+           <!--Resize button by user given data-->
+        <div class="text-center" style="padding-top: 10px;">
+            <button class="btn btn-outline-info" onclick="resize()">Resize</button>
+            <button  id="download" onclick="download()" class="btn btn-outline-info">Download Resize Image</button>
+        </div>
+           
+        
+       </div>
+        <script src="task1.js"></script>
+        <script async src="opencv.js"></script>
+    </body>
+    
+</html>
